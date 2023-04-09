@@ -12,7 +12,7 @@ html {
 body {
   font-family: 'Poppins', sans-serif;
   color: #444;
-  background-image: url("../city.png");
+  background-image: url("https://github.com/CHI-KEKE/Bank_Account_Management/blob/main/city.png");
   max-height: 100vh;
   padding: 2rem;
   display:flex;
