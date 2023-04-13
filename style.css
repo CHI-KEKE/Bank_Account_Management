@@ -102,50 +102,6 @@ nav a:hover::after{
 }
 
 
-/* .login {
-  display: flex;
-} */
-
-/* .login__input {
-  border: none;
-  padding: 0.5rem 2rem;
-  font-size: 1.6rem;
-  font-family: inherit;
-  text-align: center;
-  width: 12rem;
-  border-radius: 10rem;
-  margin-right: 1rem;
-  color: inherit;
-  border: 1px solid #fff;
-  transition: all 0.3s;
-}
-
-.login__input:focus {
-  outline: none;
-  border: 1px solid #ccc;
-}
-
-.login__input::placeholder {
-  color: #bbb;
-}
-
-.login__btn {
-  border: none;
-  background: none;
-  font-size: 2.2rem;
-  color: inherit;
-  cursor: pointer;
-  transition: all 0.3s;
-}
-
-.login__btn:hover,
-.login__btn:focus,
-.btn--sort:hover,
-.btn--sort:focus {
-  outline: none;
-  color: #777;
-} */
-
 /* MAIN */
 .app {
   position: relative;
@@ -154,9 +110,6 @@ nav a:hover::after{
   display: flex;
   justify-content: center;
   align-items: center; 
-  /* NOTE This creates the fade in/out anumation */
-  /* opacity: 0; */
-  /* transition: all 1s; */
   z-index:10;
   height: 100vh;
 } 
@@ -172,8 +125,6 @@ nav a:hover::after{
   display: grid;
   grid-template-columns: 55% 45%;
   grid-template-rows: 16% 16% 16% 16% 16% 16%;
-  /* grid-template-columns: 4fr 3fr;
-  grid-template-rows: auto repeat(3, 15rem) auto; */
   gap: 1rem;
   transition: all 1s;
   border:1px antiquewhite;
@@ -415,9 +366,6 @@ nav a:hover::after{
   justify-content: center;
   align-items: center;
   overflow:hidden;
-  /* padding: 0.1rem 1rem;
-  border-radius: 10rem;
-  margin-right: 2rem; */
 }
 
 .movements__type--deposit::before{
@@ -548,9 +496,6 @@ nav a:hover::after{
   border-radius: 3rem;
   padding: 3rem 3rem;
   color: #333;
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
 }
 
 .operation--transfer {
@@ -572,7 +517,6 @@ h2 {
 
 .form.form--transfer {
   display: grid;
-  /* grid-template-columns: 2.5fr 2.5fr 1fr; */
   grid-template-columns: 50% 50%;
   grid-template-rows: auto auto auto;
   gap: 0.4rem 1rem;
