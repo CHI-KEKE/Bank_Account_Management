@@ -23,6 +23,11 @@ The goal for this course is to learn:
 ● CSS
 ● Javascript
 
+## Attribute
+- Course :　https://github.com/jonasschmedtmann/complete-javascript-course
+- Log-in Design : Codehal(YouTube)
+- Background : https://www.freepik.com/
+
 ## Live Demo
 
 
