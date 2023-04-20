@@ -32,6 +32,6 @@ Made this bankist app learning from Jonas Schmedtmann, and I add some HTML/CSS t
 
 ## Live Demo
 - Login username : al
-- Login password : 1234
+- Login password : 123
 
 🎈[Demo](https://chi-keke.github.io/Bank_Account_Management//)🎈
