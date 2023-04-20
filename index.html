@@ -14,23 +14,24 @@
     <link rel="stylesheet" href="style.css" />
     <title>Allen_Bank</title>
   </head>
-  <header>
-      <p class="welcome">Allen's Bank</p>
-      <nav>
-        <a href="#">Checking</a>
-        <a href="#">Savings</a>
-        <a href="#">Credit Cards</a>
-        <a href="#">Home Loans</a>
-        <button class="btnLogin-popup">Login</button>
 
-      </nav>
-  </header>
   <body>
+    <header>
+        <p class="welcome">Allen's Bank</p>
+        <nav>
+          <a href="#">Checking</a>
+          <a href="#">Savings</a>
+          <a href="#">Credit Cards</a>
+          <a href="#">Home Loans</a>
+          <button class="btnLogin-popup">Login</button>
+
+        </nav>
+    </header>
     <!-- TOP NAVIGATION -->
 
     <!-- <main class="app"> -->
 
-     <!-- Login POP-UP -->
+      <!-- Login POP-UP -->
     <main class="app">
       <div class="wrapper">
             <span class="icon-close"><ion-icon name="close"></ion-icon></span>
@@ -87,6 +88,7 @@
             </div>
       </div>
       <div class="app_container">
+      <span class="icon-close-container"><ion-icon name="close"></ion-icon></span>
       <!-- BALANCE -->
         <div class="balance">
           <div>
@@ -122,7 +124,9 @@
         <p class="summary__value summary__value--out">0000€</p>
         <p class="summary__label">Interest</p>
         <p class="summary__value summary__value--interest">0000€</p>
-        <button class="btn--sort">&downarrow; SORT</button>
+        <div class="btn-container">
+          <button class="btn--sort">&downarrow; SORT</button>
+        </div>
       </div>
 
       <!-- OPERATION: TRANSFERS -->
@@ -157,6 +161,10 @@
          <span class="timer"></span>
       </p>
     </main>
+
+    <!-- <footer>
+      &copy; by Jonas Schmedtmann. Don't claim as your own :)
+    </footer> -->
 
     <script src="script.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
