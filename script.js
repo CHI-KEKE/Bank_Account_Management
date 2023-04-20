@@ -5,7 +5,8 @@ const loginLink = document.querySelector(".login-link");
 const registerLink = document.querySelector(".register-link");
 const btnPopup = document.querySelector('.btnLogin-popup');
 const iconClose = document.querySelector('.icon-close');
-const LoginBtn = document.querySelector('.login-btn');
+const containerClose = document.querySelector('.icon-close-container');
+const LoginBtn = document.querySelector('.login-btn')
 const inputLoginUsername = document.querySelector('.login__input--user');
 const inputLoginPassword = document.querySelector('.login__input--password');
 const containerApp = document.querySelector('.app_container');
@@ -48,7 +49,7 @@ const account1 = {
     '2020-08-01T10:51:36.790Z',
   ],
   currency: 'EUR',
-  locale: 'pt-PT', // 
+  locale: 'pt-PT', // de-DE
 };
 
 const account2 = {
@@ -105,7 +106,9 @@ iconClose.addEventListener('click', () => {
   wrapper.classList.remove('active-popup');
 });
 
-
+containerClose.addEventListener('click',() => {
+  containerApp.style.opacity = 0;
+})
 /////////////Logout Timer!///////////////////////////////////////////////////////////
   const startLogOutTimer = function () {
     const tick = function () {
@@ -126,6 +129,7 @@ iconClose.addEventListener('click', () => {
       time--;
     };
 
+    // Set time to 5 minutes
     let time = 1200;
 
     // Call the timer every second
@@ -170,6 +174,7 @@ const calcDisplaySummary = function (acc) {
     .filter(mov => mov > 0)
     .map(deposit => (deposit * acc.interestRate) / 100)
     .filter((int, i, arr) => {
+      // console.log(arr);
       return int >= 1;
     })
     .reduce((deposit, int) => deposit + int, 0);
@@ -188,6 +193,10 @@ const formatMovementDate = function (date, locale) {
   if (daysPassed === 1) return 'Yesterday';
   if (daysPassed <= 7) return `${daysPassed} days ago`;
 
+  // const day = `${date.getDate()}`.padStart(2, 0);
+  // const month = `${date.getMonth() + 1}`.padStart(2, 0);
+  // const year = date.getFullYear();
+  // return `${day}/${month}/${year}`;
   return new Intl.DateTimeFormat(locale).format(date);
 };
 
@@ -251,6 +260,7 @@ LoginBtn.addEventListener('click', function (e) {
       day: 'numeric',
       month: 'numeric',
       year: 'numeric',
+      // weekday: 'long',
     };
     const locale = navigator.language;
     console.log(locale);
@@ -259,6 +269,13 @@ LoginBtn.addEventListener('click', function (e) {
       currentAccount.locale,
       options
     ).format(now);
+
+    // const day = `${now.getDate()}`.padStart(2, 0);
+    // const month = `${now.getMonth() + 1}`.padStart(2, 0);
+    // const year = now.getFullYear();
+    // const hour = `${now.getHours()}`.padStart(2, 0);
+    // const min = `${now.getMinutes()}`.padStart(2, 0);
+    // labelDate.textContent = `${day}/${month}/${year}, ${hour}:${min}`;
 
     // Clear input fields
     inputLoginUsername.value = inputLoginPassword.value = '';
