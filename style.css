@@ -29,11 +29,13 @@ header{
   left:0;
   width:100%;
   padding:6px 80px;
+  height: 20vh;
   /* background:#777; */
   display:flex;
   justify-content: space-between;
   align-items:center;
   z-index:99;
+  margin-bottom: 10px;
 }
 
 
@@ -102,6 +104,50 @@ nav a:hover::after{
 }
 
 
+/* .login {
+  display: flex;
+} */
+
+/* .login__input {
+  border: none;
+  padding: 0.5rem 2rem;
+  font-size: 1.6rem;
+  font-family: inherit;
+  text-align: center;
+  width: 12rem;
+  border-radius: 10rem;
+  margin-right: 1rem;
+  color: inherit;
+  border: 1px solid #fff;
+  transition: all 0.3s;
+}
+
+.login__input:focus {
+  outline: none;
+  border: 1px solid #ccc;
+}
+
+.login__input::placeholder {
+  color: #bbb;
+}
+
+.login__btn {
+  border: none;
+  background: none;
+  font-size: 2.2rem;
+  color: inherit;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.login__btn:hover,
+.login__btn:focus,
+.btn--sort:hover,
+.btn--sort:focus {
+  outline: none;
+  color: #777;
+} */
+
 /* MAIN */
 .app {
   position: relative;
@@ -110,27 +156,36 @@ nav a:hover::after{
   display: flex;
   justify-content: center;
   align-items: center; 
+  /* NOTE This creates the fade in/out anumation */
+  /* opacity: 0; */
+  /* transition: all 1s; */
   z-index:10;
   height: 100vh;
 } 
 
 
 .app_container{
+  position: relative;
   height: 80vh;
   margin-bottom:10px;
+  width: 80vw;
   position: relative;
+  top: 80px;
   max-width: 180rem;
   z-index:5;
   background-color: antiquewhite;
   display: grid;
   grid-template-columns: 55% 45%;
   grid-template-rows: 16% 16% 16% 16% 16% 16%;
+  /* grid-template-columns: 4fr 3fr;
+  grid-template-rows: auto repeat(3, 15rem) auto; */
   gap: 1rem;
   transition: all 1s;
   border:1px antiquewhite;
   border-radius: 20px;
   box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
   opacity:0;
+  overflow: scroll;
 }
 
 .wrapper {
@@ -186,6 +241,23 @@ nav a:hover::after{
     transform: translateX(0);
 }
 
+
+.icon-close-container{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 45px;
+  height: 45px;
+  background: #444;
+  font-size: 2rem;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom-left-radius: 20px;
+  cursor: pointer;
+  z-index: 98;
+}
 
 .wrapper .icon-close{
   position: absolute;
@@ -318,9 +390,9 @@ nav a:hover::after{
   grid-row:1;
   display: flex;
   align-items: flex-end;
-  justify-content: space-between;
+  justify-content: flex-start;
   margin-bottom: 1.5rem;
-  padding:1px 25px 5px 25px;
+  padding:1px 15px 5px 15px;
 }
 
 .balance__label {
@@ -335,8 +407,10 @@ nav a:hover::after{
 }
 
 .balance__value {
+  position: absolute;
   font-size: 4.5rem;
   font-weight: 400;
+  right: 100px;
 }
 
 /* MOVEMENTS */
@@ -366,6 +440,9 @@ nav a:hover::after{
   justify-content: center;
   align-items: center;
   overflow:hidden;
+  /* padding: 0.1rem 1rem;
+  border-radius: 10rem;
+  margin-right: 2rem; */
 }
 
 .movements__type--deposit::before{
@@ -442,6 +519,7 @@ nav a:hover::after{
   align-items: baseline;
   padding: 0 0.3rem;
   margin-top: 0.5rem;
+  position: relative;
 }
 
 .summary__label {
@@ -469,7 +547,9 @@ nav a:hover::after{
   color: #21d610;
 }
 
-
+.btn-container{
+  position: relative;
+}
 
 .btn--sort {
   margin-left: auto;
@@ -479,8 +559,7 @@ nav a:hover::after{
   font-weight: 700;
   cursor: pointer;
   position: absolute;
-  right:28rem;
-  bottom:20rem;
+  left: 0;
 }
 
 /* OPERATIONS */
@@ -496,6 +575,9 @@ nav a:hover::after{
   border-radius: 3rem;
   padding: 3rem 3rem;
   color: #333;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
 }
 
 .operation--transfer {
@@ -517,6 +599,7 @@ h2 {
 
 .form.form--transfer {
   display: grid;
+  /* grid-template-columns: 2.5fr 2.5fr 1fr; */
   grid-template-columns: 50% 50%;
   grid-template-rows: auto auto auto;
   gap: 0.4rem 1rem;
