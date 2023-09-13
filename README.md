@@ -26,7 +26,6 @@ Made this bankist app learning from Jonas Schmedtmann, and I add some HTML/CSS t
 ● Javascript
 
 ## Attribute
-- Course :　https://github.com/jonasschmedtmann/complete-javascript-course
 - Log-in Design : Codehal(YouTube)
 - Background : https://www.freepik.com/
 
